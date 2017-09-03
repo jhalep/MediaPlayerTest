@@ -1,5 +1,6 @@
 package com.example.jhale.mediaplayertest;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 playAudio.setText("Playing audio!");
+                MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.ting);
+                mediaPlayer.start();
             }
         });
     }
